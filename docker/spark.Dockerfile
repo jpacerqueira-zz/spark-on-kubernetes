@@ -13,7 +13,7 @@ ARG SPARK_VERSION=2.4.5
 #RUN export JAVA_HOME=/usr/lib/jvm/default-java ; ls /usr/lib/jvm/java-8-openjdk-amd64/ ; cd /usr/lib/jvm/ ; ln -s java-8-openjdk-amd64 default-java
 #
 # Install 
-RUN apt update && apt install -y curl tini libc6 libpam-modules libnss3
+RUN apt update && apt install -y  apt-utils software-properties-common  curl tini libc6 libpam-modules libnss3
 
 # Install fake java6-runtime-headless (scala 2.11 dependency) in order to install Scala
 RUN apt install -y --no-install-recommends equivs
