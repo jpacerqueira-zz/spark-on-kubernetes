@@ -4,6 +4,14 @@ FROM uprush/apache-hadoop:3.2.1
 ARG SCALA_VER=2.11.12
 ARG SPARK_VERSION=2.4.5
 
+# MY Install :- Including openjdk-11 and openjdk-8
+#RUN apt-get update &&  apt-get install -y software-properties-common && rm -rf /var/lib/apt/lists/*
+#RUN add-apt-repository --remove ppa:openjdk-r/ppa
+#RUN apt update && add-apt-repository -y ppa:openjdk-r/ppa 
+#RUN apt update && apt install -y curl tini libc6 libpam-modules libnss3 
+#RUN apt update && apt install -y openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jre
+#RUN export JAVA_HOME=/usr/lib/jvm/default-java ; ls /usr/lib/jvm/java-8-openjdk-amd64/ ; cd /usr/lib/jvm/ ; ln -s java-11-openjdk-amd64 default-java
+#
 # Install 
 RUN apt update && apt install -y curl tini libc6 libpam-modules libnss3
 
@@ -14,6 +22,7 @@ RUN cd /tmp && equivs-build /tmp/java6-runtime-headless.control \
     && dpkg -i java6-runtime-headless_8u242_all.deb \
     && rm java6-runtime-headless.control \
     && rm java6-runtime-headless_8u242_all.deb
+
 
 # Download and install Scala.
 RUN curl -O https://www.scala-lang.org/files/archive/scala-$SCALA_VER.deb \
