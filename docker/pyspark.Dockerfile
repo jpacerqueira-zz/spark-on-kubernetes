@@ -1,4 +1,4 @@
-FROM jpacerqueira/spark-k8s:2.4.5
+FROM jpacerqueira83/spark-k8s:2.4.5
 
 USER root
 

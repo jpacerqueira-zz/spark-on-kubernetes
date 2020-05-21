@@ -5,6 +5,6 @@
 
 ./build-hadoop.sh
 ./build-hive.sh
-./build-spark-sh
+./build-spark.sh
 ./build-pyspark.sh
 #
