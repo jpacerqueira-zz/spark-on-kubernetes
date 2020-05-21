@@ -9,8 +9,8 @@ ARG SPARK_VERSION=2.4.5
 #RUN add-apt-repository --remove ppa:openjdk-r/ppa
 #RUN apt update && add-apt-repository -y ppa:openjdk-r/ppa 
 #RUN apt update && apt install -y curl tini libc6 libpam-modules libnss3 
-#RUN apt update && apt install -y openjdk-11-jre-headless openjdk-11-jdk openjdk-11-jre
-#RUN export JAVA_HOME=/usr/lib/jvm/default-java ; ls /usr/lib/jvm/java-8-openjdk-amd64/ ; cd /usr/lib/jvm/ ; ln -s java-11-openjdk-amd64 default-java
+#RUN apt update && apt install -y openjdk-11-jre-headless openjdk-11-jdk openjdk-8-jdk openjdk-8-jre
+#RUN export JAVA_HOME=/usr/lib/jvm/default-java ; ls /usr/lib/jvm/java-8-openjdk-amd64/ ; cd /usr/lib/jvm/ ; ln -s java-8-openjdk-amd64 default-java
 #
 # Install 
 RUN apt update && apt install -y curl tini libc6 libpam-modules libnss3
