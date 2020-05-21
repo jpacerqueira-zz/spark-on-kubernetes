@@ -1,4 +1,4 @@
-FROM gftjoao/apache-spark:2.4.5
+FROM jpacerqueira/spark-k8s:2.4.5
 
 USER root
 

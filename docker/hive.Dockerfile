@@ -1,4 +1,4 @@
-FROM uprush/apache-hadoop:3.2.1
+FROM jpacerqueira83/hadoop-k8s:3.2.1
 
 # Variables that define which software versions to install.
 ARG HIVE_VERSION=3.1.2
