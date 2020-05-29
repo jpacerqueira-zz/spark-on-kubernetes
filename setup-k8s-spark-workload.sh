@@ -14,7 +14,8 @@ OPER=$1
 # Step 3 Dummy
 if [[ $OPER == "1" ]]; then
    ./spark/run-spark-pi-2k8s-pods
-   echo "Setup done! Look into K8S logs for spark-pi application"
+   #./spark/run-pyspark-pi-2k8s-pods
+   echo "Setup done! Look into K8S logs for pyspark-pi application"
 else
    echo "Setup done! execute your own application via : ~ $ ./execute-k8s-spark-workload.sh MY_APPLICATION.yaml  "
 fi
