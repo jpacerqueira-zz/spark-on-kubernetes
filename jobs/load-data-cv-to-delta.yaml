@@ -47,6 +47,10 @@ spec:
 #
 #
   mainApplicationFile: local:///job-dir/load-data-cv-to-delta.py
+#
+  arguments:
+     - " --packages io.delta:delta-core_2.11:0.6.1 "
+#
   sparkVersion: "2.4.5"
   restartPolicy:
     type: OnFailure
