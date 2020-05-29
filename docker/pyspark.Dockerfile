@@ -25,5 +25,13 @@ RUN python3 -m pip --no-cache-dir install --upgrade \
 RUN python3 -m pip --no-cache-dir install \
     wheel \
     pypandoc \
-    pyspark==2.4.5
+    pyspark==2.4.5 \
+    pandas \
+    numpy \ 
+    io \
+    os \ 
+    pdfminer.six \
+    pyarrow \
+    h2o
+## included aditional libraries required in pyspark jobs
 #
