@@ -14,8 +14,8 @@ skills_table="role_skills"
 ###
 ######
 ##############################Execution##########################
-import findspark
-findspark.init()
+#import findspark
+#findspark.init()
 #
 #
 import pyspark
@@ -101,7 +101,7 @@ data_analytics_df3.printSchema()
 data_analytics_df3.show(5)
 #
 #
-data_analytics_df4=sqlContext.sql(" select distinct(a.filename) from ngrams_cv as a, role_skills as b where b.role = 'devops engineer' AND b.level='5' AND b.skill = "terraform" AND (array_contains(a.1_grams,b.skill)) limit 10 ")
+data_analytics_df4=sqlContext.sql(" select distinct(a.filename) from ngrams_cv as a, role_skills as b where b.role = 'devops engineer' AND b.level='5' AND b.skill = 'terraform' AND (array_contains(a.1_grams,b.skill)) limit 10 ")
 data_analytics_df4.printSchema()
 data_analytics_df4.show(5)
 #

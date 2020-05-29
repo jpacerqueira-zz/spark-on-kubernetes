@@ -26,12 +26,11 @@ RUN python3 -m pip --no-cache-dir install \
     wheel \
     pypandoc \
     pyspark==2.4.5 \
-    pandas \
+    scipy \
     numpy \ 
-    io \
-    os \ 
-    pdfminer.six \
+    pandas \
     pyarrow \
+    pdfminer.six \
     h2o
 ## included aditional libraries required in pyspark jobs
 #
