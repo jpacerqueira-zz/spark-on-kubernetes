@@ -52,6 +52,10 @@ ENV SPARK_HOME="/opt/spark"
 ENV PATH="/opt/spark/bin:${PATH}"
 RUN echo "export SPARK_DIST_CLASSPATH=$(hadoop classpath)" >> /opt/spark/conf/spark-env.sh
 
+# Loading Additional Librarion into $SPARK_EXTRA_CLASSPATH
+ENV SPARK_EXTRA_CLASSPATH="io.delta:delta-core_2.11:0.6.1:${SPARK_EXTRA_CLASSPATH}"
+RUN echo "export SPARK_EXTRA_CLASSPATH='io.delta:delta-core_2.11:0.6.1:${SPARK_EXTRA_CLASSPATH}' " >> /opt/spark/conf/spark-env.sh
+
 COPY entrypoint.sh /opt
 ENTRYPOINT ["/opt/entrypoint.sh"]
 
