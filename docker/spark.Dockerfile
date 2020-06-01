@@ -59,3 +59,7 @@ RUN echo "export SPARK_EXTRA_CLASSPATH='io.delta:delta-core_2.11:0.6.1:${SPARK_E
 COPY entrypoint.sh /opt
 ENTRYPOINT ["/opt/entrypoint.sh"]
 
+### Additional Libraries Loaded as local jars
+### delta.io delta-lake
+COPY delta-core_2.11-0.6.1.jar /opt/spark/jars
+

@@ -48,7 +48,9 @@ spec:
   mainApplicationFile: local:///job-dir/dataminer-categorized-delta-analytics.py
 #
   arguments:
-     - " --packages io.delta:delta-core_2.11:0.6.1 "
+     - " "
+  packages:
+     - "io.delta:delta-core_2.11:0.6.1"
 #
   sparkVersion: "2.4.5"
   restartPolicy:

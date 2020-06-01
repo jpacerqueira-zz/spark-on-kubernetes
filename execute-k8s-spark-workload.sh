@@ -8,8 +8,8 @@ MY_APPLICATION=$1
 #
 # Step 3 Dummy
 if [ -z $MY_APPLICATION ]; then
-   ./spark/run-pyspark-pi-2k8s-pods
-   #./spark/run-spark-pi-2k8s-pods
+   ./spark/run-spark-pi-2k8s-pods
+   #./spark/run-pyspark-pi-2k8s-pods
    echo "Execute spark-pi application! SparkDriver K8S logs! "
 else
    cd jobs
