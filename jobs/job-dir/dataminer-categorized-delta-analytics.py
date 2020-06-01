@@ -3,13 +3,13 @@
 ##############################
 ###
 ### Input delta in folder :  /data/delta
-json_cv_file="data/delta/json-cv-pdf"
+json_cv_file="/job-dir/"+"data/delta/json-cv-pdf"
 json_cv_table="pdf_cv"
 #
-ngrams_cv_file="data/delta/cv-files-ngrams"
+ngrams_cv_file="/job-dir/"+"data/delta/cv-files-ngrams"
 ngrams_cv_table="ngrams_cv"
 #
-skills_file="data/delta/role_skills"
+skills_file="/job-dir/"+"data/delta/role_skills"
 skills_table="role_skills"
 ###
 ######

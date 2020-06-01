@@ -1,5 +1,10 @@
 FROM jpacerqueira83/spark-k8s:2.4.5
 
+USER spark
+### Additional Libraries Loaded as local jars
+### delta.io delta-lake
+COPY delta-core_2.11-0.6.1.jar /opt/spark/jars
+
 USER root
 
 # See http://bugs.python.org/issue19846

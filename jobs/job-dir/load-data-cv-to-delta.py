@@ -9,10 +9,10 @@
 from datetime import datetime
 
 datepath=datetime.today().strftime('%Y-%m-%d')
-pdf_daily_path = "data/raw_pdf/dt="+datepath+"/" 
+pdf_daily_path ="/job-dir/"+"data/raw_pdf/dt="+datepath+"/" 
 #
-json_daily_path="data/raw_json/dt="+datepath+"/"
-delta_json_structure="data/delta/json-cv-pdf"
+json_daily_path="/job-dir/"+"data/raw_json/dt="+datepath+"/"
+delta_json_structure="/job-dir/"+"data/delta/json-cv-pdf"
 
 import numpy as np
 import pandas as pd
@@ -91,8 +91,8 @@ print("Data Load Done!")
 ##############################
 ###
 ### Input delta in folder :  /data 
-my_input_delta_table="data/delta/json-cv-pdf"
-delta_ngram_structure="data/delta/cv-files-ngrams"
+my_input_delta_table="/job-dir/"+"data/delta/json-cv-pdf"
+delta_ngram_structure="/job-dir/"+"data/delta/cv-files-ngrams"
 ###
 ######
 ##############################Execution##########################
@@ -105,7 +105,6 @@ version=1
 delta_dataframe_df1=sqlContext.read.format("delta").load(my_input_delta_table)\
 .persist(pyspark.StorageLevel.MEMORY_AND_DISK_2)
 #
-##.read.format("delta").load("/delta/events")
 #
 delta_dataframe_df1.printSchema()
 delta_dataframe_df1.registerTempTable("delta_pdf_cv")
@@ -182,9 +181,9 @@ print("Calculate top 10 most frequent 1,2,3,4,5,6 ngrams  - Finished!")
 #####
 ####################################################
 #
-skills_bulk_path="data/raw_role_skills/*.csv"
+skills_bulk_path="/job-dir/"+"data/raw_role_skills/*.csv"
 #
-delta_skills_structure="data/delta/role_skills"
+delta_skills_structure="/job-dir/"+"data/delta/role_skills"
 #
 ##############################Execution##########################
 import findspark
