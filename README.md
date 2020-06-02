@@ -1,8 +1,7 @@
 
 
- - The Standard k8s-spark execution from GKS
+ - The Standard k8s-spark execution from Google Kubernetes Service - GKS - Adapted to Spark on BareMetal Kubernetes.
 
-   TODO : adapted benchmark to AKS S3 using latest SA3 connector
 
 
    All operations executed in order :
@@ -31,3 +30,4 @@
     ii. sparkctl (dedicated kubectl) available from : https://github.com/GoogleCloudPlatform/spark-on-k8s-operator/tree/master/sparkctl
 
  Notes : Apache Spark in Kubernetes with Fast S3 access layer s3a : https://towardsdatascience.com/apache-spark-with-kubernetes-and-fast-s3-access-27e64eb14e0f
+
