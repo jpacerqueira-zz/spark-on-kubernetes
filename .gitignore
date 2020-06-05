@@ -1,0 +1,6 @@
+eks_deployment/eks-cluster/.terraform
+eks_deployment/eks-cluster/.terraform/*
+eks_deployment/eks-cluster/terraform.tfstate
+eks_deployment/eks-cluster/terraform.tfstate.backup
+eks_deployment/eks-cluster/.terraform.tfstate.lock.info
+eks_deployment/eks-cluster/kubeconfig_spark-eks-*

@@ -1,16 +1,53 @@
 
 
- - The Standard k8s-spark execution from Google Kubernetes Service - GKS - Adapted to Spark on BareMetal Kubernetes.
+ -  The Standard k8s-spark execution from GKS
+
+    TODO : adapted benchmark to EKS AKS with an dedicated sa3 S3 access layer for spark-executors/pods for filesystem. At the moment works in Spark with K8S filesystem
 
 
+ 
+   In AWS/EKS core - Execution  with Terraform deployment - analysis
 
-   All operations executed in order :
+         1. Setup implies the availability in an EC2 Gateway and setup of an EKS Kubernetes cluster
+
+           i. Follow example in folder eks_deployment with script 
+           i.a. bash -x step1-setup-terraform.sh  VAR1:_YOUR_LOCAL.pem   VAR2:_YOUR_EC2  VAR3:_AWS_ACCESS_KEY_ID   VAR4:_AWS_SECRET_ACCESS_KEY 
+
+
+  ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Deploy_Terraform_Fetch1.png)
+  ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Deploy_Terraform_plan_yes_2.png)
+  ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Deploy_Terraform_plan_EKS_3.png)
+  ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Deploy_Terraform_validate_output_4.png)
+
+         2. Use Terraform destroy in folder eks_deployment/eks-cluster
+
+           i.a.  [eks-cluster] $  terraform destroy
+
+  ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Terraform_destroy_5.png) 
+   
+
+         3. Deployment of Kubernetes infrastructure with AWS CLI
+ 
+           i. confirm in ' aws eks '  the context when your cluster deployed
+           i.a. [eks-cluster] $  aws eks --region eu-west-1 update-kubeconfig --name spark-eks-QiTsE99z 
+             a.               $  Added new context arn:aws:eks:eu-west-1:512336214250:cluster/spark-eks-QiTsE99z to /Users/joci/.kube/config
+
+  ![EKS for spark- K8S - Teraform Hashicorp Default package](images/AWS_CLI_add_EKS_context_6.png)
+
+
+         4. AWS Console - EKS regional setup detials for Spark-EKS-Version.x.y.z
+
+ 
+  ![AWS Console - Deployment of Kubernetes infrastructure with AWS CLI](images/AWS_Console_EKS_Cluster_7.png)
+
+
+ -  K8S workloads
+    Where All operations executed in order :
 
    ./setup-k8s-spark-workload.sh
 
          1. spark/install-spark-kubernetes-operator
          2. spark/create-spark-service-account
-
 
    ./execute-k8s-spark-workload.sh
 
@@ -18,7 +55,19 @@
 
            i.   spark/run-spark-pi-2k8s-pods
            ii. e.g. ./execute-k8s-spark-workload.sh dataminer-categorized-pdf-to-csv-analytics
- 
+
+
+   In Docker/Kubernetes core - Execution analysis
+
+
+  ![DataMiner Notebook - package running in loal Kubernetes](images/JOB-Execution-v1.png)
+  ![DataMiner Notebook - delta-lake package issue JOB1](images/K8S-PySpark-Dataminer-JOB1.png)
+  ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB2.png)
+  ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB3.png)
+  ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB4.png)
+  ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB5.png)
+  ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB6.png)
+
 
    Spark Running on Kubernetes
 
@@ -29,5 +78,11 @@
     i.  https://github.com/GoogleCloudPlatform/spark-on-k8s-operator/blob/master/docs/api-docs.md 
     ii. sparkctl (dedicated kubectl) available from : https://github.com/GoogleCloudPlatform/spark-on-k8s-operator/tree/master/sparkctl
 
- Notes : Apache Spark in Kubernetes with Fast S3 access layer s3a : https://towardsdatascience.com/apache-spark-with-kubernetes-and-fast-s3-access-27e64eb14e0f
 
+   EKS Operator for Terraform from Hashicorp HCL website
+    i.  https://learn.hashicorp.com/terraform/kubernetes/provision-eks-cluster
+
+ 
+  Aditional Notes :  checkout branch execution_with_datapoints for data executions
+ 
+   Aditional literature : Apache Spark in Kubernetes with Fast S3 access layer s3a : https://towardsdatascience.com/apache-spark-with-kubernetes-and-fast-s3-access-27e64eb14e0f
