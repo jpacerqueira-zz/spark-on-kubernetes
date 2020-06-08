@@ -11,7 +11,7 @@
          1. Setup implies the availability in an EC2 Gateway and setup of an EKS Kubernetes cluster
 
            i. Follow example in folder eks_deployment with script 
-           i.a. bash -x step1-setup-terraform.sh  VAR1:_YOUR_LOCAL.pem   VAR2:_YOUR_EC2  VAR3:_AWS_ACCESS_KEY_ID   VAR4:_AWS_SECRET_ACCESS_KEY 
+           i.a. bash -x step1-setup-terraform.sh  VAR1:_YOUR_LOCAL.pem   VAR2:_AWS_ACCESS_KEY_ID   VAR3:_AWS_SECRET_ACCESS_KEY   VAR4:_AWS_REGION  VAR5:_EKS_TF_CONFIG  
 
 
   ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Deploy_Terraform_Fetch1.png)
@@ -66,7 +66,6 @@
   ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB3.png)
   ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB4.png)
   ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB5.png)
-  ![DataMiner Notebook - delta-lake package issue JOB2](images/Dataminer-JOB6.png)
 
 
    Spark Running on Kubernetes
