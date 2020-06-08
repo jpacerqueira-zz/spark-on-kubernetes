@@ -41,6 +41,12 @@
   ![AWS Console - Deployment of Kubernetes infrastructure with AWS CLI](images/AWS_Console_EKS_Cluster_7.png)
 
 
+         5. using kubectl activate token and login to Kubernetes console
+
+  ![Kubernetes - kubctl - proxy token - JOB1](images/Kubectl-Save-Token-Start-Proxy-v1.png)
+  ![Kubernetes - proxy - JOB2](images/Setup-Proxy-Kubernetes-V2.png)
+
+
  -  K8S workloads
     Where All operations executed in order :
 
@@ -55,6 +61,11 @@
 
            i.   spark/run-spark-pi-2k8s-pods
            ii. e.g. ./execute-k8s-spark-workload.sh dataminer-categorized-pdf-to-csv-analytics
+
+
+   In Kubernetes Proxy - Execution Analysis and logs
+  
+  ![Kubernetes - proxy - JOB3](images/Job-Execution-Spark-Kubernetes-V3.png)
 
 
    In Docker/Kubernetes core - Execution analysis
