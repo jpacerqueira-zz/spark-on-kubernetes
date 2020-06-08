@@ -44,7 +44,6 @@
          5. using kubectl activate token and login to Kubernetes console
 
   ![Kubernetes - kubctl - proxy token - JOB1](images/Kubectl-Save-Token-Start-Proxy-v1.png)
-  ![Kubernetes - proxy - JOB2](images/Setup-Proxy-Kubernetes-V2.png)
 
 
  -  K8S workloads
@@ -54,6 +53,8 @@
 
          1. spark/install-spark-kubernetes-operator
          2. spark/create-spark-service-account
+
+  ![Kubernetes - proxy - JOB2](images/Setup-Proxy-Kubernetes-V2.png)
 
    ./execute-k8s-spark-workload.sh
 
