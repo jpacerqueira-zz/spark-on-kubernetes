@@ -1,8 +1,8 @@
 
 
  -  An setup to deploy Kubernetes in AWS EKS 
- - - The Standard GKS spark was here adapted to EKS
- - - - Adopt Multi-Cloud Strategies with this technologies and other compatible with Kubernetes
+   - The Standard GKS spark was here adapted to EKS
+    -  Adopt Multi-Cloud Strategies with this technologies and other compatible with Kubernetes
 
          1. Step 0 : Setup your AWSCLI and account - each deployment and example run costs less than $0.24 USD
 
