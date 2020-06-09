@@ -1,11 +1,11 @@
 
 
- -  The Standard k8s-spark execution from GKS
+ -  The Standard k8s-spark execution from GKS adapted here to run in AWS-EKS :- Adopt Multi-Cloud Strategies with this Technologies
 
-    TODO : adapted benchmark to EKS AKS with an dedicated sa3 S3 access layer for spark-executors/pods for filesystem. At the moment works in Spark with K8S filesystem
+       Step 0 : $ brew install awscli
+                $ aws configure
 
 
- 
    In AWS/EKS core - Execution  with Terraform deployment - analysis
 
          1. Setup implies the availability in an EC2 Gateway and setup of an EKS Kubernetes cluster
@@ -94,6 +94,8 @@
     i.  https://learn.hashicorp.com/terraform/kubernetes/provision-eks-cluster
 
  
-  Aditional Notes :  checkout branch execution_with_datapoints for data executions
- 
+   Next To\Do : adapted benchmark to EKS AKS with an dedicated sa3 S3 access layer for spark-executors/pods for filesystem. At the moment works in Spark with K8S filesystem
+  
+   Aditional Notes :  checkout branch execution_with_datapoints for data executions
+  
    Aditional literature : Apache Spark in Kubernetes with Fast S3 access layer s3a : https://towardsdatascience.com/apache-spark-with-kubernetes-and-fast-s3-access-27e64eb14e0f
