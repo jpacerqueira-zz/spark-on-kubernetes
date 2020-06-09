@@ -4,7 +4,7 @@
    - The Standard GKS spark was here adapted to EKS
    -  Adopt multi-cloud strategies with this technologies and others compatible with Kubernetes and its auto-scaling capabilities.
 
-         1. Step 0 : Setup your AWSCLI and account - each deployment and example run costs less than $0.24 USD
+          1. Step 0 : Setup your AWSCLI and account - each deployment and example run costs less than $0.24 USD
 
            i.a.     $ brew install awscli
            i.b.     $ aws configure
@@ -12,7 +12,7 @@
 
    In AWS/EKS core - Execution  with Terraform deployment - analysis
 
-         1. Setup implies the availability in an EC2 Gateway and setup of an EKS Kubernetes cluster
+         2. Setup implies the availability in an EC2 Gateway and setup of an EKS Kubernetes cluster
 
            i. Follow example in folder eks_deployment with script 
            i.a. [eks_deployment] $ bash -x step1-setup-terraform.sh  VAR1:_YOUR_LOCAL.pem   VAR2:_AWS_ACCESS_KEY_ID   VAR3:_AWS_SECRET_ACCESS_KEY   VAR4:_AWS_REGION  VAR5:_EKS_TF_CONFIG  
@@ -23,14 +23,14 @@
   ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Deploy_Terraform_plan_EKS_3.png)
   ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Deploy_Terraform_validate_output_4.png)
 
-         2. Use Terraform destroy in folder eks_deployment/eks-cluster
+         3. Use Terraform destroy in folder eks_deployment/eks-cluster
 
            i.a.  [eks-cluster] $  terraform destroy
 
   ![EKS for spark- K8S - Teraform Hashicorp Default package](images/Terraform_destroy_5.png) 
    
 
-         3. Deployment of Kubernetes infrastructure with AWS CLI
+         4. Deployment of Kubernetes infrastructure with AWS CLI
  
            i. confirm in ' aws eks '  the context when your cluster deployed
            i.a. [eks-cluster] $  aws eks --region eu-west-1 update-kubeconfig --name spark-eks-QiTsE99z 
@@ -39,13 +39,13 @@
   ![EKS for spark- K8S - Teraform Hashicorp Default package](images/AWS_CLI_add_EKS_context_6.png)
 
 
-         4. AWS Console - EKS regional setup detials for Spark-EKS-Version.x.y.z
+         5. AWS Console - EKS regional setup detials for Spark-EKS-Version.x.y.z
 
  
   ![AWS Console - Deployment of Kubernetes infrastructure with AWS CLI](images/AWS_Console_EKS_Cluster_7.png)
 
 
-         5. using kubectl activate token and login to Kubernetes console
+         6. using kubectl activate token and login to Kubernetes console
 
   ![Kubernetes - kubctl - proxy token - JOB1](images/Kubectl-Save-Token-Start-Proxy-v1.png)
 
