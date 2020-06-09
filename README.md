@@ -1,10 +1,10 @@
 
 
  -  An setup to deploy Kubernetes in AWS EKS 
-   - The Standard GKS spark was here adapted to EKS
+   - The Standard GKS spark was here adapted to EKS ( each terraform deploy / run costs less than $0.29 USD )
    -  Adopt multi-cloud strategies with this technologies and others compatible with Kubernetes and its auto-scaling capabilities.
 
-          1. Step 0 : Setup your AWSCLI and account - each deployment and example run costs less than $0.24 USD
+          1. Step 0 : Setup your AWSCLI and account
 
            i.a.     $ brew install awscli
            i.b.     $ aws configure
