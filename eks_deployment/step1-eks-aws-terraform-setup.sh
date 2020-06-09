@@ -47,6 +47,10 @@ else
    #
    cd $HERE_TF/$EKS_SOURCE_TF && terraform init && terraform plan && terraform apply && aws eks --region $REG_AWS update-kubeconfig --name ${EKS_NAME} 
    #
+   # BUG FIX : https://github.com/terraform-aws-modules/terraform-aws-eks/issues/757 
+   # Workaround is to override the wait_for_cluster_cmd and use the default value prior to 750 e.g.
+   export wait_for_cluster_cmd = "until curl -k -s $ENDPOINT/healthz >/dev/null; do sleep 4; done"
+   #
 fi
 #
 # Setup Spark Kubernetes Baremetal instances

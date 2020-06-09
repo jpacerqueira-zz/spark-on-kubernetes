@@ -4,9 +4,10 @@ module "eks" {
   subnets      = module.vpc.private_subnets
 
   tags = {
-    Environment = "spark"
+    Environment = "training"
     GithubRepo  = "terraform-aws-eks"
     GithubOrg   = "terraform-aws-modules"
+    EnvironmentVersion = "spark-v2" 
   }
 
   vpc_id = module.vpc.vpc_id
