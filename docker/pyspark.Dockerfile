@@ -39,3 +39,4 @@ RUN python3 -m pip --no-cache-dir install \
     h2o
 ## included aditional libraries required in pyspark jobs
 #
+ENV SPARK_EXTRA_CLASSPATH="io.delta:delta-core_2.11:0.6.1,${SPARK_EXTRA_CLASSPATH}"
